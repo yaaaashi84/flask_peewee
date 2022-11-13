@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/create" method="post">
+        <h1>Post Create</h1>
+        <p>名前<input type="text" name="postName" id=""></p>
+        <p>タイトル<input type="text" name="postTitle" id=""></p>
+        <p>内容<input type="text" name="postBody" id=""></p>
+        <p><input type="submit" value="登録"></p>
+    </form>
+
+    {% for p in posts %}
+    <p> {{ p.name }} {{ p.title }} {{ p.body }} </p>
+    {% endfor %}
+
+</body>
+</html>
